@@ -1,0 +1,231 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/touch"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.3">
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7">
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" >
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:mapType="normal"
+            tools:context=".MapStartedActivity" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pp"
+            android:layout_width="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="50dp"
+            android:src="@drawable/dummypp"/>
+
+        <ImageView
+            android:id="@+id/pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginBottom="20dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="@drawable/earn_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            >
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:textColor="@color/white"
+                    android:text="Current Earnings"/>
+                <TextView
+                    android:id="@+id/earnings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textSize="21dp"
+                    android:paddingStart="16dp"
+                    android:gravity="left"
+                    android:fontFamily="@font/cera_pro_bold"
+                    android:textColor="@color/white"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:textColor="@color/white"
+                    android:text="Next Settlement Date"/>
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textSize="16dp"
+                    android:paddingStart="16dp"
+                    android:gravity="left"
+                    android:fontFamily="@font/cera_pro_bold"
+                    android:textColor="@color/white"
+                    android:text="August 31,2020"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:gravity="bottom|end"
+        android:background="@drawable/layout_bg_noborder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textlocation"
+            android:layout_marginTop="32dp"
+            android:focusable="false"
+            android:gravity="center"
+            android:fontFamily="@font/cera_pro_bold"
+            android:text="Start Earning Mode"
+            android:focusableInTouchMode="false"
+            android:ellipsize="end"
+            android:inputType="text"
+            android:textSize="18dp"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="center"
+            android:fontFamily="@font/cera_pro_medium"
+            android:text="Click below to start accepting orders"
+            android:focusableInTouchMode="false"
+            android:ellipsize="end"
+            android:layout_marginTop="4dp"
+            android:inputType="text"
+            android:textSize="14dp"
+            android:maxLines="2"
+            android:textColor="#999999" />
+
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="32dp"
+            android:layout_gravity="center"
+            android:background="@drawable/go"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

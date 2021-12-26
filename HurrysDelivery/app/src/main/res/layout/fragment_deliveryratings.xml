@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".Fragment.RateUs">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@drawable/rate"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#999999"
+                        android:textSize="21dp"
+                        android:fontFamily="@font/cera_pro_bold"
+                        android:text=""/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/close_rate"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Great Delivery "
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cera_pro_medium"
+                android:textSize="24dp"/>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/rate_circle"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You Earned"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:textSize="12dp"/>
+
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\u20b9 10"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/cera_pro_bold"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:weightSum="2"
+                android:background="@drawable/earn"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:textColor="@color/white"
+                    android:text="Current Earnings"/>
+
+                <TextView
+                    android:id="@+id/earnings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:paddingStart="2dp"
+                    android:gravity="left"
+                    android:fontFamily="@font/cera_pro_bold"
+                    android:textColor="@color/white"
+                    android:text="\u20b90.00"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:text="How was the delivery experience with the customer?"
+            android:textColor="@color/black"
+            android:fontFamily="@font/cera_pro_medium"
+            android:textSize="16dp"/>
+
+        <com.willy.ratingbar.RotationRatingBar
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_height="wrap_content"
+            app:srb_drawableEmpty="@drawable/star_empty"
+            app:srb_drawableFilled="@drawable/star_filled"
+            />
+
+
+        <EditText
+            android:id="@+id/f1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="#999999"
+            android:layout_gravity="bottom"
+            android:paddingStart="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:gravity="bottom"
+            android:paddingEnd="8dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/border_line"
+            android:fontFamily="@font/cera_pro_medium"
+            android:textSize="16dp"
+            android:hint="Optional Feedback"
+            android:text=""/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:text="How was the process from our partner store?"
+            android:textColor="@color/black"
+            android:fontFamily="@font/cera_pro_medium"
+            android:textSize="16dp"/>
+
+        <com.willy.ratingbar.RotationRatingBar
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_height="wrap_content"
+            app:srb_drawableEmpty="@drawable/star_empty"
+            app:srb_drawableFilled="@drawable/star_filled"
+            />
+
+
+        <EditText
+            android:id="@+id/f2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="#999999"
+            android:layout_gravity="bottom"
+            android:paddingStart="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:layout_marginEnd="16dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/border_line"
+            android:fontFamily="@font/cera_pro_medium"
+            android:textSize="16dp"
+            android:hint="Optional Feedback"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/cera_pro_bold"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
