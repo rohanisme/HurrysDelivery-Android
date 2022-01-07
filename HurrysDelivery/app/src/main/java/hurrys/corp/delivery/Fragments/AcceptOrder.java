@@ -235,7 +235,7 @@ public class AcceptOrder extends Fragment {
 
                                             List<LatLng> path = new ArrayList();
                                             GeoApiContext context = new GeoApiContext.Builder()
-                                                    .apiKey("AIzaSyCPhxfpptoIc1yca5U8mXIigIajoERQCdE")
+                                                    .apiKey("AIzaSyCnaq_nQX-2yYsEQHJifUmS2q3Je5N-f7c")
                                                     .build();
 
 
@@ -603,7 +603,7 @@ public class AcceptOrder extends Fragment {
     public String getDurationForRoute(String origin, String destination) throws InterruptedException, ApiException, IOException {
         // - We need a context to access the API
         GeoApiContext geoApiContext = new GeoApiContext.Builder()
-                .apiKey("AIzaSyCPhxfpptoIc1yca5U8mXIigIajoERQCdE")
+                .apiKey("AIzaSyCnaq_nQX-2yYsEQHJifUmS2q3Je5N-f7c")
                 .build();
 
         // - Perform the actual request

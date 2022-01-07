@@ -137,7 +137,7 @@ public class Neworder extends Fragment
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getActivity());
-        Places.initialize(getContext(), "AIzaSyCPhxfpptoIc1yca5U8mXIigIajoERQCdE");
+        Places.initialize(getContext(), "AIzaSyCnaq_nQX-2yYsEQHJifUmS2q3Je5N-f7c");
         placesClient = Places.createClient(getContext());
         final AutocompleteSessionToken token = AutocompleteSessionToken.newInstance();
 

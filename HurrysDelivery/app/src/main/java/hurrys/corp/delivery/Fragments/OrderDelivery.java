@@ -264,7 +264,7 @@ public class OrderDelivery extends Fragment {
 
                     List<LatLng> path = new ArrayList();
                     GeoApiContext context = new GeoApiContext.Builder()
-                            .apiKey("AIzaSyCPhxfpptoIc1yca5U8mXIigIajoERQCdE")
+                            .apiKey("AIzaSyCnaq_nQX-2yYsEQHJifUmS2q3Je5N-f7c")
                             .build();
 
 
