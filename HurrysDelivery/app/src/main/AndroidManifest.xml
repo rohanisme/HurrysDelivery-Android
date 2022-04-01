@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".Activities.IntroScreens"></activity>
+        <activity  android:exported="true" android:name=".Activities.IntroScreens"></activity>
         <activity
             android:name=".Activities.SplashScreen"
+            android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,17 +22,21 @@
         </activity>
         <activity
             android:name=".Activities.RegisterDetails"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.Permissions"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.Login"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".Activities.MainActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             android:windowSoftInputMode="adjustPan" />
 
         <meta-data
@@ -59,7 +64,7 @@
             android:value="@string/default_notification_channel_id" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCnaq_nQX-2yYsEQHJifUmS2q3Je5N-f7c" />
+            android:value="AIzaSyBpffV9yHzav26I5CBZxT0BdJuo06MsK3I" />
 
         <service
             android:name=".Services.LocationService"
@@ -67,6 +72,7 @@
         <service
             android:name=".Configurations.MyFirebaseMessagingService"
             android:exported="false">
+
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

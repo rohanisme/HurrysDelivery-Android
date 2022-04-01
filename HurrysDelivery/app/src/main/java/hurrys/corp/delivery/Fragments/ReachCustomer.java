@@ -295,6 +295,10 @@ public class ReachCustomer extends Fragment {
 //                                    shimmer_view_container.setVisibility(View.VISIBLE);
                                     progressBar.setVisibility(View.VISIBLE);
 
+                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("SellerStatus").setValue(null);
+                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("DeliveryStatus").setValue(null);
+                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child(session.getusername()).setValue(null);
+                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("Status").setValue("5");
                                     FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("DeliveredDate").setValue(date1);
                                     FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("DeliveredDateTime").setValue(date2);
 

@@ -271,7 +271,7 @@ public class PastOrderDetails extends Fragment {
                     bundle.putString("pushid",pushid);
                     bundle.putString("vendor",vid);
                     bundle.putString("delivery",did);
-                    bundle.putString("earned",earned);
+                    bundle.putString("charges",earned);
                     fragment.setArguments(bundle);
                     if(getActivity()!=null) {
                         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

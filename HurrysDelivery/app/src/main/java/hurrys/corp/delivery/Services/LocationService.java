@@ -39,8 +39,8 @@ public class LocationService extends Service {
 
     Session session;
     private FusedLocationProviderClient mFusedLocationClient;
-    private final static long UPDATE_INTERVAL = 25000;  /* 5 Sec*/
-    private final static long FASTEST_INTERVAL =  1000; /* 1 Sec */
+    private final static long UPDATE_INTERVAL = 250000;  /* 50 Sec*/
+    private final static long FASTEST_INTERVAL =  5000; /* 5 Sec */
 
     public static final String ACTION_START_FOREGROUND_SERVICE = "ACTION_START_FOREGROUND_SERVICE";
     public static final String ACTION_STOP_FOREGROUND_SERVICE = "ACTION_STOP_FOREGROUND_SERVICE";

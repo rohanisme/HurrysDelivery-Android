@@ -264,7 +264,7 @@ public class OrderDelivery extends Fragment {
 
                     List<LatLng> path = new ArrayList();
                     GeoApiContext context = new GeoApiContext.Builder()
-                            .apiKey("AIzaSyCnaq_nQX-2yYsEQHJifUmS2q3Je5N-f7c")
+                            .apiKey("AIzaSyBpffV9yHzav26I5CBZxT0BdJuo06MsK3I")
                             .build();
 
 
@@ -422,12 +422,7 @@ public class OrderDelivery extends Fragment {
                                                                         "Cr", "Delivery Total", orderid, "Pending",pushid);
                                                                 rref1.setValue(earnings);
 
-                                                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("SellerStatus").setValue(null);
-                                                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("DeliveryStatus").setValue(null);
-                                                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child(session.getusername()).setValue(null);
-                                                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("Status").setValue("5");
-                                                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("DeliveredDate").setValue(date1);
-                                                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(pushid).child("DeliveredDateTime").setValue(date2);
+
                                                                     stopLocationService();
                                                                         if(getActivity()!=null) {
                                                                             Fragment fragment = new ReachCustomer();
